@@ -3,11 +3,11 @@ import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react';
-import Alert from './components/Alert';
-import Signup from './components/Signup';
-import Login from './components/Login';
-import Dashboard from './components/Dashboard';
-import NoteState from './context/notes/NoteState';
+//import Alert from './components/Alert';
+//import Signup from './components/Signup';
+//import Login from './components/Login';
+//import Dashboard from './components/Dashboard';
+//import NoteState from './context/notes/NoteState';
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,18 +19,18 @@ import {
 function App() {
   const [mode, setmode] = useState('light');
   const [modetext, setmodeText] = useState("Enable Dark Mode");
-  const [alert, setalert] = useState(null);
+  //const [alert, setalert] = useState(null);
   
 
-  const showalert = (message,type)=>{
-    setalert({
-      msg : message,
-      type : type
-    })
-    setTimeout(() => {
-      setalert(null)
-    }, 1000);
-  }
+  // const showalert = (message,type)=>{
+  //   setalert({
+  //     msg : message,
+  //     type : type
+  //   })
+  //   setTimeout(() => {
+  //     setalert(null)
+  //   }, 1000);
+  // }
   const toggleMode = ()=> {
     if (mode === 'light') {
       setmode('dark');
@@ -49,19 +49,19 @@ function App() {
   }
   return (
     <>
-    <NoteState>
+    {/* <NoteState> */}
     <Router>
-     <Navbar title ="Speedy Rent" aboutText ="About" mode ={mode} toggleMode={toggleMode} modetext={modetext} />
-     <Alert alert = {alert} />
+     <Navbar title ="Texted" aboutText ="About" mode ={mode} toggleMode={toggleMode} modetext={modetext} />
+     {/* <Alert alert = {alert} /> */}
      <div className="container my-3"> {/* my-3 is margin of 3 in y axis, container is class of bootstrap */}
      <Switch>
           <Route exact path="/about">
             <About mode={mode}/>
           </Route>
           <Route exact path="/">
-            <TextForm alert = {showalert} heading = "Enter text to analyze" mode={mode} />
+            <TextForm heading = "Enter text to analyze" mode={mode} />
           </Route>
-          <Route exact path="/login">
+          {/* <Route exact path="/login">
             <Login mode={mode}/>
           </Route>
           <Route exact path="/signup">
@@ -69,12 +69,12 @@ function App() {
           </Route>
           <Route exact path="/dashboard">
             <Dashboard mode={mode}/>
-          </Route>
+          </Route> */}
       </Switch>
             
      </div>
     </Router>
-    </NoteState>
+    {/* </NoteState> */}
     </>  
   );
 }

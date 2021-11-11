@@ -43,36 +43,36 @@ export default function About(props) {
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
                     <button className="accordion-button collapsed" type="button" style={{backgroundColor:props.mode === 'dark' ? '#161414' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}} data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        Team
+                        Developer
                     </button>
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div className="accordion-body" style={{backgroundColor:props.mode === 'dark' ? '#161414' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}}>
-                        <strong>Speedy Rent :</strong> Meet Jatin Shah, Pratyush Bhattacharya, Jiju Lin, Yu-Xuan Zhai
+                        <strong>Meet Jatin Shah</strong> 
                     </div>
                     </div>
                 </div>
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingTwo">
                     <button className="accordion-button collapsed" style={{backgroundColor:props.mode === 'dark' ? '#161414' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Batch of SE
+                        Texted
                     </button>
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div className="accordion-body" style={{backgroundColor:props.mode === 'dark' ? '#161414' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}}>
-                        <strong>Fall 2021</strong> (Group 4)
+                        <strong>A text editor with light/dark modes which converts the user entered text into desired output.</strong>
                     </div>
                     </div>
                 </div>
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingThree">
                     <button className="accordion-button collapsed"  style={{backgroundColor:props.mode === 'dark' ? '#161414' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Professor 
+                        Education 
                     </button>
                     </h2>
                     <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                     <div className="accordion-body" style={{backgroundColor:props.mode === 'dark' ? '#161414' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}}>
-                        <strong>Kurt Seiffert</strong>
+                        <strong>MS in Computer Science</strong>
                     </div>
                     </div>
                 </div>

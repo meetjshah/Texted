@@ -42,36 +42,36 @@ export default function About(props) {
             <div className="accordion ml-3" id="accordionExample" style={{color:props.mode === 'dark' ? 'white' : 'black'}} >
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
-                    <button className="accordion-button collapsed" type="button" style={{backgroundColor:props.mode === 'dark' ? '#161414' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}} data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <button className="accordion-button collapsed" type="button" style={{backgroundColor:props.mode === 'dark' ? 'rgb(36 74 104)' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}} data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                         Developer
                     </button>
                     </h2>
                     <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div className="accordion-body" style={{backgroundColor:props.mode === 'dark' ? '#161414' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}}>
+                    <div className="accordion-body" style={{backgroundColor:props.mode === 'dark' ? 'rgb(36 74 104)' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}}>
                         <strong>Meet Jatin Shah</strong> 
                     </div>
                     </div>
                 </div>
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingTwo">
-                    <button className="accordion-button collapsed" style={{backgroundColor:props.mode === 'dark' ? '#161414' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <button className="accordion-button collapsed" style={{backgroundColor:props.mode === 'dark' ? 'rgb(36 74 104)' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         Texted
                     </button>
                     </h2>
                     <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div className="accordion-body" style={{backgroundColor:props.mode === 'dark' ? '#161414' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}}>
-                        <strong>A text editor with light/dark modes which converts the user entered text into desired output.</strong>
+                    <div className="accordion-body" style={{backgroundColor:props.mode === 'dark' ? 'rgb(36 74 104)' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}}>
+                        <strong>TextEd is a word counter and character counting utility with light/dark modes which converts the user entered text into desired output.</strong>
                     </div>
                     </div>
                 </div>
                 <div className="accordion-item">
                     <h2 className="accordion-header" id="headingThree">
-                    <button className="accordion-button collapsed"  style={{backgroundColor:props.mode === 'dark' ? '#161414' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <button className="accordion-button collapsed"  style={{backgroundColor:props.mode === 'dark' ? 'rgb(36 74 104)' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         Education 
                     </button>
                     </h2>
                     <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                    <div className="accordion-body" style={{backgroundColor:props.mode === 'dark' ? '#161414' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}}>
+                    <div className="accordion-body" style={{backgroundColor:props.mode === 'dark' ? 'rgb(36 74 104)' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}}>
                         <strong>MS in Computer Science</strong>
                     </div>
                     </div>

@@ -4,10 +4,7 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react';
 import Alert from './components/Alert';
-//import Signup from './components/Signup';
-//import Login from './components/Login';
-//import Dashboard from './components/Dashboard';
-//import NoteState from './context/notes/NoteState';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -37,23 +34,22 @@ function App() {
       document.body.style.backgroundColor = '#042743';
       setmodeText("Enable Light Mode");
       showalert("Dark Mode Enabled","success");
-      //document.title ="Speedy Rent - Dark Mode";
+      //document.title ="TextEd - Dark Mode";
     }
     else {
       setmode('light');
       document.body.style.backgroundColor = 'white';
       setmodeText("Enable Dark Mode");
       showalert("Light Mode Enabled","success");
-      //document.title = "Speedy Rent - Light Mode";
+      //document.title = "TextEd - Light Mode";
     }
   }
   return (
     <>
-    {/* <NoteState> */}
     <Router>
      <Navbar title ="TextEd" aboutText ="About" mode ={mode} toggleMode={toggleMode} modetext={modetext} />
      <Alert alert = {alert} />
-     <div className="container my-3"> {/* my-3 is margin of 3 in y axis, container is class of bootstrap */}
+     <div className="container my-3">
      <Switch>
           <Route exact path="/about">
             <About mode={mode}/>
@@ -61,20 +57,10 @@ function App() {
           <Route exact path="/">
             <TextForm alert={showalert} heading = "Enter text to analyze" mode={mode} />
           </Route>
-          {/* <Route exact path="/login">
-            <Login mode={mode}/>
-          </Route>
-          <Route exact path="/signup">
-            <Signup mode={mode} />
-          </Route>
-          <Route exact path="/dashboard">
-            <Dashboard mode={mode}/>
-          </Route> */}
       </Switch>
             
      </div>
     </Router>
-    {/* </NoteState> */}
     </>  
   );
 }

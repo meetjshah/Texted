@@ -6,18 +6,6 @@ export default function TextForm(props) {
     
     const [text, setText] /*array destructuring*/ = useState('');
     
-    
-    // if(text.length === 0){
-    //     noVal = 0;
-    // } 
-    // else{
-        
-    //     if(text.charAt(" ")){
-    //         //console.log(noVal);
-    //         noVal = text.split(" ").length;
-    //     }
-         
-    // }
 
     const handleUpClick = ()=> {
         // console.log("Upper Case was clicked");
@@ -44,6 +32,7 @@ export default function TextForm(props) {
         let text = document.getElementById("myBox");
         text.select();
         navigator.clipboard.writeText(text.value);
+        document.getSelection().removeAllRanges();
         props.alert("Text Copied","success");
     }
     const handleInvertClick = ()=> {
@@ -89,11 +78,11 @@ export default function TextForm(props) {
             <div className="mb-3">
                 <textarea className="form-control" value = {text} onChange={handleOnChange} style={{backgroundColor:props.mode === 'dark' ? '#13466e' : 'white', color:props.mode === 'dark' ? 'white' : 'black'}} placeholder ="Enter Text Here" id="myBox" rows="3"></textarea>
             </div>
-            <button className={`btn btn-outline-${props.mode === 'light'?'primary':'light'} my-1`} onClick = {handleUpClick}>Uppercase</button>
-            <button className={`btn btn-outline-${props.mode === 'light'?'primary':'light'} mx-2 my-1`} onClick = {handleLoClick}>Lowercase</button>
-            <button className={`btn btn-outline-${props.mode === 'light'?'primary':'light'} mx-2 my-1`} onClick = {handleCCClick}>Capitalized Case</button>
-            <button className={`btn btn-outline-${props.mode === 'light'?'primary':'light'} mx-2 my-1`} onClick = {handleInvertClick}>Inverted Text</button>
-            <button className={`btn btn-outline-${props.mode === 'light'?'primary':'light'} mx-2 my-1`} onClick = {handleCopyTextClick}>Copy Text</button>
+            <button disabled={text.length===0} className={`btn btn-outline-${props.mode === 'light'?'primary':'light'} my-1`} onClick = {handleUpClick}>Uppercase</button>
+            <button disabled={text.length===0} className={`btn btn-outline-${props.mode === 'light'?'primary':'light'} mx-2 my-1`} onClick = {handleLoClick}>Lowercase</button>
+            <button disabled={text.length===0} className={`btn btn-outline-${props.mode === 'light'?'primary':'light'} mx-2 my-1`} onClick = {handleCCClick}>Capitalized Case</button>
+            <button disabled={text.length===0} className={`btn btn-outline-${props.mode === 'light'?'primary':'light'} mx-2 my-1`} onClick = {handleInvertClick}>Inverted Text</button>
+            <button disabled={text.length===0} className={`btn btn-outline-${props.mode === 'light'?'primary':'light'} mx-2 my-1`} onClick = {handleCopyTextClick}>Copy Text</button>
         </div>
         <div className="container" style={{color:props.mode === 'dark' ? 'white' : 'black'}}>
             <div className="my-3">
@@ -103,7 +92,7 @@ export default function TextForm(props) {
             <h3>Time required to read</h3>
             <p>{(0.008*text.split(" ").filter((element)=>{return element.length!==0}).length)} Minutes</p>
             <h3>Preview</h3>
-            <p>{text.length>0 ? text:"Enter something to preview"}</p>
+            <p>{text.length>0 ? text:"Nothing to preview"}</p>
         </div>
         </>
     )

@@ -7,7 +7,7 @@ It has dark and light modes.
 
 ### Tech Stack/Languages: React.js, JavaScript, HTML/CSS, Bootstrap
 
-### React Concepts: useState, useEffect, Router, Switch, Link 
+### React Concepts: useState, useEffect, useLocation, Router, Switch, Link 
 
 
 
